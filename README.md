@@ -1,7 +1,26 @@
 node-kickstart
 ==============
 
-A node.js web server example without any web framework
+A nodejs project template. Fork this project to kickstart your project.
+
+Quick start
+--------
+
+Create master branch
+
+    git branch master && git checkout master
+
+Edit /routes/api.js, append:
+
+    api.hello = function(req, res) {
+        res.end(JSON.stringify({hello: 'world'}));
+    }
+
+Start service
+
+    ./dev.sh
+
+Browse http://localhost:3000/api/hello
 
 Start up
 --------

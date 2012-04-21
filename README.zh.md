@@ -1,12 +1,26 @@
 node-kickstart
 ==============
 
-fork 这个项目来开启一个新项目.
+nodejs 轻量项目模板. fork 这个项目来开启一个新项目.
 
-启动
+快速开始
 --------
 
+创建master分支
+
+    git branch master && git checkout master
+
+编辑 /routes/api.js, 追加下列代码
+
+    api.hello = function(req, res) {
+        res.end(JSON.stringify({hello: 'world'}));
+    }
+
+启动
+
     ./dev.sh
+
+浏览 http://localhost:3000/api/hello
 
 为什么要创建这个项目?
 --------
