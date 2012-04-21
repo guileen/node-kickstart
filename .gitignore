@@ -11,5 +11,7 @@ pids
 logs
 results
 
+public/*.html
+
 node_modules
 npm-debug.log
