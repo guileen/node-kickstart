@@ -1,6 +1,6 @@
 var connect = require('connect')
   , path = require('path')
-  , utils = require('./utils')
+  , utils = require('../lib/utils')
   ;
 
 // default static files

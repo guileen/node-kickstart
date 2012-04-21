@@ -1,4 +1,4 @@
-var utils = require('./utils');
+var utils = require('../lib/utils');
 
 // url /user/*
 var user = module.exports = function(req, res) {
