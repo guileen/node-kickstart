@@ -1,0 +1,22 @@
+{
+  "author": "Gui Lin",
+  "name": "kickstart",
+  "version": "0.0.0",
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/guileen/node-kickstart.git"
+  },
+  "engines": {
+    "node": "0.6"
+  },
+  "dependencies": {
+    "connect": "2",
+    "mime": "*"
+  },
+  "devDependencies": {
+    "nodemon": "*",
+    "jade": "*"
+  },
+  "optionalDependencies": {}
+}
