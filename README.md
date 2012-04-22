@@ -22,11 +22,6 @@ Start service
 
 Browse http://localhost:3000/api/hello
 
-Start up
---------
-
-    ./dev.sh
-
 LICENSE
 ========
 
