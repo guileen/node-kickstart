@@ -1,3 +1,3 @@
 #! /bin/sh
-nodemon --watch static --exec 'jade -O public/' static/*.jade &
+nodemon --watch static --exec 'jade -o {title:"kickstart"} -O public/' static/*.jade &
 node-dev app.js
