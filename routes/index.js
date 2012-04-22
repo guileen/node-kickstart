@@ -16,8 +16,9 @@ var app = module.exports = function(req, res) {
 
 // url /
 app.index = function(req, res, next) {
-  utils.staticCache(res, 'index.html')
-  // you can also use below code, just for NOTE
+  res.staticCache('index.html')
+  // utils.staticCache(res, 'index.html')
+  // slow version
   // req.url = '/index.html'
   // static.handle(req, res);
 }

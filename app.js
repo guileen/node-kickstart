@@ -4,7 +4,12 @@ var http = require('http')
   , getHandler = utils.getHandler
   , handlers = utils.buildHandlers(routes, {append_slash: true});
 
+// import response utilities
+require('./lib/response');
+
 var app = function(req, res) {
+
+  res.req = req;
 
   var pathAndQuery = req.url.split('?', 2);
   var path = req.path = pathAndQuery[0];

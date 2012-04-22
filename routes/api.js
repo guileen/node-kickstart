@@ -5,10 +5,10 @@ var api = exports = module.exports;
 
 // url /api/json
 api.json = function(req, res) {
-  res.end(JSON.stringify({
-        id: 'id'
-      , msg: 'i am json'
-  }))
+  res.endjson({
+      id: 'id'
+    , msg: 'i am json'
+  })
 }
 
 // url /api/msgpack
