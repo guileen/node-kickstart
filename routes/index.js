@@ -4,18 +4,14 @@ var connect = require('connect')
   ;
 
 // default static files
-var static = connect()
-  .use(connect.favicon())
-  .use(connect.static(path.join(__dirname, '../public')))
-  .use(connect.staticCache())
-  ;
-
-var app = module.exports = function(req, res) {
-  static.handle(req, res);
-}
+var app = module.exports = utils.use(
+  connect.favicon()
+, connect.static(path.join(__dirname, '../public'))
+, connect.staticCache()
+);
 
 // url /
-app.index = function(req, res, next) {
+app.index = function(req, res) {
   res.staticCache('index.html')
   // utils.staticCache(res, 'index.html')
   // slow version
@@ -23,5 +19,9 @@ app.index = function(req, res, next) {
   // static.handle(req, res);
 }
 
-app.user = require('./user')
+app.login = function(req, res) {
+  res.staticCache('login.html')
+}
+
+app.user = require('./user');
 app.api = require('./api');
