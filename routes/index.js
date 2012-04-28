@@ -8,6 +8,10 @@ var app = module.exports = utils.use(
   connect.favicon()
 , connect.static(path.join(__dirname, '../public'))
 , connect.staticCache()
+, function(req, res, next) {
+    res.writeHead(404);
+    res.end('Not Found');
+  }
 );
 
 // url /

@@ -19,4 +19,8 @@ var app = function(req, res) {
 
 }
 
-http.createServer(app).listen(3000)
+if(module.parent) {
+  module.exports = app
+} else {
+  http.createServer(app).listen(3000)
+}

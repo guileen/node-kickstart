@@ -16,6 +16,8 @@
   },
   "devDependencies": {
     "nodemon": "*",
+    "mocha": "*",
+    "should": "*",
     "jade": "*"
   },
   "optionalDependencies": {}
